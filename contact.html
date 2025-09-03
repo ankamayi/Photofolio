@@ -13,12 +13,35 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <style type="text/tailwindcss">
       :root {
-        --primary-color: #f1f2f4;
-        --secondary-color: #e0e2e5;
-        --background-color: #ffffff;
-        --text-primary: #1a1a1a;
-        --text-secondary: #4a4a4a;
-        --accent-color: #d0d2d5;
+        --primary-color-light: #f1f2f4;
+        --secondary-color-light: #e0e2e5;
+        --background-color-light: #ffffff;
+        --text-primary-light: #1a1a1a;
+        --text-secondary-light: #4a4a4a;
+        --accent-color-light: #d0d2d5;
+        
+        --primary-color-dark: #2d3748;
+        --secondary-color-dark: #4a5568;
+        --background-color-dark: #1a202c;
+        --text-primary-dark: #f7fafc;
+        --text-secondary-dark: #a0aec0;
+        --accent-color-dark: #718096;
+      }
+      .light-mode {
+        --primary-color: var(--primary-color-light);
+        --secondary-color: var(--secondary-color-light);
+        --background-color: var(--background-color-light);
+        --text-primary: var(--text-primary-light);
+        --text-secondary: var(--text-secondary-light);
+        --accent-color: var(--accent-color-light);
+      }
+      .dark-mode {
+        --primary-color: var(--primary-color-dark);
+        --secondary-color: var(--secondary-color-dark);
+        --background-color: var(--background-color-dark);
+        --text-primary: var(--text-primary-dark);
+        --text-secondary: var(--text-secondary-dark);
+        --accent-color: var(--accent-color-dark);
       }
       body {
         font-family: 'Work Sans', sans-serif;
@@ -33,9 +56,17 @@
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
           0 4px 6px -4px rgba(0, 0, 0, 0.1);
       }
+      .dark-mode .card-shadow {
+        box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.07),
+          0 2px 4px -2px rgba(255, 255, 255, 0.07);
+      }
+      .dark-mode .card-shadow:hover {
+        box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1),
+          0 4px 6px -4px rgba(255, 255, 255, 0.1);
+      }
     </style>
   </head>
-  <body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+  <body class="light-mode bg-[var(--background-color)] text-[var(--text-primary)]">
     <div class="flex min-h-screen flex-col">
       <header
         class="sticky top-0 z-10 w-full border-b border-[var(--secondary-color)] bg-[var(--background-color)]/80 backdrop-blur-sm"
@@ -58,33 +89,64 @@
             </svg>
             <h1 class="text-xl font-bold tracking-tight">PhotoFolio</h1>
           </a>
-          <nav class="hidden items-center gap-8 md:flex">
-            <a
-              class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
-              href="index.html"
-              >Home</a
+          <div class="flex items-center gap-4">
+            <nav class="hidden items-center gap-8 md:flex">
+              <a
+                class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+                href="index.html"
+                >Home</a
+              >
+              <a
+                class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+                href="about.html"
+                >About</a
+              >
+              <a
+                class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+                href="projects.html"
+                >Projects</a
+              >
+              <a
+                class="text-sm font-bold text-[var(--text-primary)] transition-colors hover:text-[var(--text-primary)]"
+                href="contact.html"
+                >Contact</a
+              >
+              <a
+                class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+                href="my_favorites.html"
+                >My Favorites</a
+              >
+            </nav>
+            <button
+              class="rounded-full p-2 hover:bg-[var(--accent-color)]"
+              id="theme-toggle"
             >
-            <a
-              class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
-              href="about.html"
-              >About</a
-            >
-            <a
-              class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
-              href="projects.html"
-              >Projects</a
-            >
-            <a
-              class="text-sm font-bold text-[var(--text-primary)] transition-colors hover:text-[var(--text-primary)]"
-              href="contact.html"
-              >Contact</a
-            >
-            <a
-              class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
-              href="my_favorites.html"
-              >My Favorites</a
-            >
-          </nav>
+              <svg
+                class="hidden h-5 w-5 text-[var(--text-primary)]"
+                fill="currentColor"
+                id="theme-toggle-dark-icon"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                ></path>
+              </svg>
+              <svg
+                class="hidden h-5 w-5 text-[var(--text-primary)]"
+                fill="currentColor"
+                id="theme-toggle-light-icon"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.121-3.536a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM3.05 4.95a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zm9.9 0a1 1 0 011.414 0l.707.707a1 1 0 11-1.414 1.414l-.707-.707a1 1 0 010-1.414zM4 10a1 1 0 01-1-1H2a1 1 0 110-2h1a1 1 0 011 1zm10.95.05a1 1 0 00-1.414 0l-.707.707a1 1 0 101.414 1.414l.707-.707a1 1 0 000-1.414z"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
         </div>
       </header>
       <main class="flex-1">
@@ -244,5 +306,56 @@
         </div>
       </footer>
     </div>
+    <script>
+      const themeToggleBtn = document.getElementById('theme-toggle');
+      const themeToggleDarkIcon = document.getElementById(
+        'theme-toggle-dark-icon'
+      );
+      const themeToggleLightIcon = document.getElementById(
+        'theme-toggle-light-icon'
+      );
+      // Change the icons inside the button based on previous settings
+      if (
+        localStorage.getItem('color-theme') === 'dark' ||
+        (!('color-theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        themeToggleLightIcon.classList.remove('hidden');
+        document.body.classList.add('dark-mode');
+        document.body.classList.remove('light-mode');
+      } else {
+        themeToggleDarkIcon.classList.remove('hidden');
+        document.body.classList.add('light-mode');
+        document.body.classList.remove('dark-mode');
+      }
+      themeToggleBtn.addEventListener('click', function () {
+        // toggle icons inside button
+        themeToggleDarkIcon.classList.toggle('hidden');
+        themeToggleLightIcon.classList.toggle('hidden');
+        // if set via local storage previously
+        if (localStorage.getItem('color-theme')) {
+          if (localStorage.getItem('color-theme') === 'light') {
+            document.body.classList.add('dark-mode');
+            document.body.classList.remove('light-mode');
+            localStorage.setItem('color-theme', 'dark');
+          } else {
+            document.body.classList.add('light-mode');
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('color-theme', 'light');
+          }
+          // if NOT set via local storage previously
+        } else {
+          if (document.body.classList.contains('dark-mode')) {
+            document.body.classList.add('light-mode');
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('color-theme', 'light');
+          } else {
+            document.body.classList.add('dark-mode');
+            document.body.classList.remove('light-mode');
+            localStorage.setItem('color-theme', 'dark');
+          }
+        }
+      });
+    </script>
   </body>
 </html>
