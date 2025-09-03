@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PhotoFolio - ミニマルな写真ポートフォリオ</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #f1f2f4;
+        --secondary-color: #e0e2e5;
+        --background-color: #ffffff;
+        --text-primary: #1a1a1a;
+        --text-secondary: #4a4a4a;
+        --accent-color: #d0d2d5;
+      }
+      body {
+        font-family: 'Work Sans', sans-serif;
+        background-color: var(--background-color);
+        color: var(--text-primary);
+      }
+      .card-shadow {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07),
+          0 2px 4px -2px rgba(0, 0, 0, 0.07);
+      }
+      .card-shadow:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -4px rgba(0, 0, 0, 0.1);
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+    <div class="flex min-h-screen flex-col">
+      <header
+        class="sticky top-0 z-10 w-full border-b border-[var(--secondary-color)] bg-[var(--background-color)]/80 backdrop-blur-sm"
+      >
+        <div
+          class="container mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
+        >
+          <a class="flex items-center gap-2" href="#">
+            <svg
+              class="h-8 w-8 text-[var(--text-primary)]"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4ZM12 6C8.69 6 6 8.69 6 12C6 15.31 8.69 18 12 18C15.31 18 18 15.31 18 12C18 8.69 15.31 6 12 6ZM10 12C10 10.9 10.9 10 12 10C13.1 10 14 10.9 14 12C14 13.1 13.1 14 12 14C10.9 14 10 13.1 10 12Z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+            <h1 class="text-xl font-bold tracking-tight">PhotoFolio</h1>
+          </a>
+          <div class="flex flex-1 items-center justify-end gap-8">
+            <nav class="hidden items-center gap-8 md:flex">
+              <a
+                class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+                href="#projects"
+                >Projects</a
+              >
+              <a
+                class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+                href="#about"
+                >About</a
+              >
+              <a
+                class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+                href="#contact"
+                >Contact</a
+              >
+            </nav>
+            <div class="hidden md:flex items-center ml-4">
+              <div class="relative">
+                <input
+                  class="w-48 rounded-md border border-[var(--secondary-color)] bg-[var(--primary-color)] px-4 py-2 text-sm text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:border-[var(--accent-color)] focus:ring-[var(--accent-color)]"
+                  placeholder="Search..."
+                  type="text"
+                />
+                <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                  <svg
+                    class="h-5 w-5 text-[var(--text-secondary)]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="container mx-auto flex-grow px-4 py-8 max-w-7xl">
+        <section class="py-16" id="projects">
+          <div class="container mx-auto px-4">
+            <div class="mb-12">
+              <h2 class="text-3xl font-bold tracking-tight text-center mb-4">
+                Color Photography
+              </h2>
+              <div
+                class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+              >
+                <div
+                  class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300"
+                >
+                  <div
+                    class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOWZgYMUa2y1ZvyagCg_oFA0TduUIU7C0Ty9uzbXBEK_Rh2IsBSzHetE41f9CRSXXltXOmngjA8rVsWHKWEzqhFVjJJK-PogQQc9b8o6-bp5FbhC8Shfj0xg-DKW4Tm6_bWlJKFhv64HSf8AoYyEAdqZ7BlfV0-yI3mHBiaEQ_lXFm4pvmnc3pMsq6BkBWsw-dvocBiAUkibEauHTXio_r_SVhapALRP1TLyQ7WfU249gz7lQKeLdztCLkD-eDkPFojjOblOjV1xg');
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300"
+                >
+                  <div
+                    class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA_tbMgLHUuAgDb8UOMjTU4jyyj8lTdUKQDf5-5hvDjdeh7PpES8Dw9ceL8VzbBTLORQBKuTo3KhQknpVChvaa-zLHjYKGVUJ01lPOPSgchAEVhKTH7Ft7gH-nrWHqzU0GC8MBQuKySeTI_Fv4n-HfgByTIwSg9qxS98fabL04toqteUqj6koGaBpechgNvQlxLnQpJtyeY2K9K95cA0-FmCXaCCQWKPmCVZqjwIiT480gATxQGuWMb6OrOVQCVAl3x52IgsNXTJJE');
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300"
+                >
+                  <div
+                    class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB5mPZwAcHt6LGbwfDCBcufJqHrTl4VUXo4lyViBYxc8M5FO7b6wMAH-EPmG09Tzw2Mff5j9AlGtROIFgeyDuPjLrc6znuReWUZWb6UaZQRstXSb1xFGUiWr4gTIWHOG-1tePACeAlqlfwvJpHTuBmJ1ouIDBt57AgMf-0sZL2o1Er__IiSqL1hidCIZlTb_C04VcEKeZ78D4Do7qViTH7HS7M6yDTXb81uSPAmqWnHs9NoOLFNUtDaf3A5pqbs1qEwaABZS2q0Yx8');
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300"
+                >
+                  <div
+                    class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCM-u_00xLVDDlE2HCaC8KzCH8jRz99tA79czeQsjvd8Q0wjyhJe4OKLEXVvPo9foio4nRapFv5MH7PVnDxmhOtrzQYHvuqxMm9l71KVFHkSylyuwb0A_YoM9GDlcCnugcnsVm9NikX_aiApH722ANFQQhIzcMCav6_1HeNO9gA5ke_VJI_9p-1R9axKir_1Uch30wj-xneUEFP3WJcPghpgtZZ4mxFi7Lai-IK_J1xNu5Nbwd4zHn6ni8DeSum7h_qeIxX7DrxI0g');
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h2 class="text-3xl font-bold tracking-tight text-center mb-4">
+                Monochrome Photography
+              </h2>
+              <div
+                class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+              >
+                <div
+                  class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300"
+                >
+                  <div
+                    class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVVh-F_zqhcgIsFbEOuCtaqkTYa4L5zAg0YY8hnFKdox-jcMjbnvNI3e3WYHiUBIZd8roU7NMq0dMKBD1S6p_Db_3Q6NHfNO6LvlHzeV4HluSAEgx7xeUd4-h78Aq6V2AZjebE-FzoZ83RHDpgXwbxiy6bk2EBjcvZcdOW7xwzK0twJLJuktGhSzXeeVHnlqWiGgjbWvtVG8_0FO1ysCM_isikJQuvvAy-1WCAdPDwyDEPK0rlxqKQzaBiu9rmmw9qF_S_UrYIkqo');
+                      filter: grayscale(100%);
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300"
+                >
+                  <div
+                    class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQkkE7j6D-pOmRH5gG1Emi1NcPPBhaC9lZ93vJVlNrsm4ZykWZ63rHiKNkgK3e-U5Is3PKbLSZbbTNdmcdJZuNgU8G42PNCVGpUY0AXvVd2V0WE7J8qGKPUOEu_mzi9dVIi8zcWiqC82_y1QN7soZb1uqBPgib66GI5AVxQev4vxf7_jHtOh9EapeMfZvrLl8ojMdSih7DR6RO-HXgt1xoGrXb-dmpXuScTce7-limA3z8L6to19_Sdxxgfexlpx7XkGJX0W2Jrno');
+                      filter: grayscale(100%);
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300"
+                >
+                  <div
+                    class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzToLrncRwlEo5RDHURySSxzRz08_HSc6wqO75QahzUj5rvFS_jUlXUj2sJcbtyT5pwDrl9I4JDVekAF6koshOsNc0IvfpVrHLT4HciBGBwtXHd4WkCF5nY-knPvku70TvEdYQEySz9cNiDyQ1VnuVRPev1b48G0wTFhrthohSeJESGw68e9WrGx3yxMdcGf4RQd24zcFupCFcAcuBTGn0OebsaOznmbzQyFWyp62DPaXl5Qq92BzcaSEE3UuNAhcZsBRyqBueP6s');
+                      filter: grayscale(100%);
+                    "
+                  ></div>
+                </div>
+                <div
+                  class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300"
+                >
+                  <div
+                    class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7CTJiOsAbwMp-D0JnnJl4UX9YOZFz-dYHxwKnOX4U1iI6zXyFa-vyPxrs-J4lgC0nBqz-HEqMJ02s1iqgAy169p89H1IBAKrvJ5au2QLnV0wig7FxgeFMPgK8cy3nA5EW6dqrbkIvgLaiAqD-2JOtcNzcKNvQyeZTdSLwSaVuMlKfff2mH4fGuJfb9UKYuzBL0nEh2R59iC_Bcf-KIfnlHq6eV90XBDU2gB9WDgSf-K7Fc-cPvj22SK4r4clsUcJeRl5Y1uMJIdM');
+                      filter: grayscale(100%);
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer
+        class="mt-auto border-t border-[var(--secondary-color)] bg-[var(--background-color)]"
+      >
+        <div
+          class="container mx-auto flex max-w-7xl flex-col items-center justify-between px-6 py-6 sm:flex-row"
+        >
+          <p class="text-sm text-[var(--text-secondary)]">
+            © 2024 PhotoFolio. All Rights Reserved.
+          </p>
+          <div class="mt-4 flex space-x-6 sm:mt-0">
+            <a
+              class="text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+              href="#"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2.04C6.5 2.04 2 6.53 2 12.06c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.33 4.68-4.56 4.93.36.31.68.92.68 1.85v2.73c0 .27.18.58.69.48C19.13 20.22 22 16.47 22 12.06c0-5.53-4.5-10.02-10-10.02z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              class="text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+              href="#"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22.46 6.43c-.81.36-1.68.61-2.6.72.93-.56 1.65-1.44 1.99-2.5a9.23 9.23 0 01-2.87 1.1A4.62 4.62 0 0015.3 4.6c-2.52 0-4.57 2.05-4.57 4.57 0 .36.04.71.12 1.05A13.02 13.02 0 013.3 5.48a4.57 4.57 0 001.41 6.1c-.75-.02-1.45-.23-2.07-.57v.06c0 2.22 1.58 4.07 3.67 4.49-.38.1-.78.16-1.19.16-.29 0-.58-.03-.86-.08.58 1.82 2.26 3.14 4.26 3.18a9.29 9.29 0 01-5.74 1.98c-.37 0-.74-.02-1.1-.06a13.05 13.05 0 007.06 2.06c8.47 0 13.1-7.02 13.1-13.1 0-.2 0-.4-.01-.6.9-.65 1.68-1.46 2.3-2.39z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              class="text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+              href="#"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.72 14.4H15.1v-4.48c0-.9-.67-1.63-1.5-1.63s-1.5.73-1.5 1.63v4.48h-1.62V9.95h1.56v.7c.45-.63 1.25-1.03 2.06-1.03 1.54 0 2.8 1.26 2.8 2.8v4.98zM8.28 16.4H6.72V9.95h1.56v6.45zM7.5 9.03c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
