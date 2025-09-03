@@ -1,152 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>PhotoFolio - Contact</title>
-    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&amp;display=swap"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <style type="text/tailwindcss">
       :root {
-        --primary-color: #454c54;
-        --secondary-color: #2c3137;
+        --primary-color: #f1f2f4;
+        --secondary-color: #e0e2e5;
         --background-color: #ffffff;
-        --text-primary: #141415;
-        --text-secondary: #737578;
-        --accent-color: #f2f2f3;
-        --border-color: #e0e0e1;
+        --text-primary: #1a1a1a;
+        --text-secondary: #4a4a4a;
+        --accent-color: #d0d2d5;
       }
       body {
-        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-family: 'Work Sans', sans-serif;
         background-color: var(--background-color);
         color: var(--text-primary);
       }
-      .dark {
-        --background-color: #1a1d20;
-        --text-primary: #e0e0e0;
-        --text-secondary: #a0a0a0;
-        --primary-color: #454c54;
-        --accent-color: #2c3137;
-        --border-color: #2c3137;
+      .card-shadow {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07),
+          0 2px 4px -2px rgba(0, 0, 0, 0.07);
+      }
+      .card-shadow:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -4px rgba(0, 0, 0, 0.1);
       }
     </style>
   </head>
-  <body>
-    <div
-      class="relative flex size-full min-h-screen flex-col bg-[var(--background-color)] group/design-root overflow-x-hidden"
-    >
-      <div class="layout-container flex h-full grow flex-col">
-        <header
-          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-color)] px-10 py-4"
+  <body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+    <div class="flex min-h-screen flex-col">
+      <header
+        class="sticky top-0 z-10 w-full border-b border-[var(--secondary-color)] bg-[var(--background-color)]/80 backdrop-blur-sm"
+      >
+        <div
+          class="container mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
         >
-          <div class="flex items-center gap-4 text-[var(--text-primary)]">
-            <div class="size-6 text-[var(--primary-color)]">
-              <svg
-                fill="none"
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clip-path="url(#clip0_6_543)">
-                  <path
-                    d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z"
-                    fill="currentColor"
-                  ></path>
-                  <path
-                    clip-rule="evenodd"
-                    d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z"
-                    fill="currentColor"
-                    fill-rule="evenodd"
-                  ></path>
-                </g>
-                <defs>
-                  <clipPath id="clip0_6_543">
-                    <rect fill="white" height="48" width="48"></rect>
-                  </clipPath>
-                </defs>
-              </svg>
-            </div>
-            <h2
-              class="text-xl font-bold leading-tight tracking-[-0.015em] text-[var(--text-primary)]"
+          <a class="flex items-center gap-2" href="index.html">
+            <svg
+              class="h-8 w-8 text-[var(--text-primary)]"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              PhotoFolio
-            </h2>
-          </div>
-          <nav
-            class="flex items-center gap-6 text-sm font-medium text-[var(--text-primary)]"
-          >
+              <path
+                clip-rule="evenodd"
+                d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4ZM12 6C8.69 6 6 8.69 6 12C6 15.31 8.69 18 12 18C15.31 18 18 15.31 18 12C18 8.69 15.31 6 12 6ZM10 12C10 10.9 10.9 10 12 10C13.1 10 14 10.9 14 12C14 13.1 13.1 14 12 14C10.9 14 10 13.1 10 12Z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+            <h1 class="text-xl font-bold tracking-tight">PhotoFolio</h1>
+          </a>
+          <nav class="hidden items-center gap-8 md:flex">
             <a
-              class="hover:text-[var(--primary-color)] transition-colors"
-              href="#"
+              class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+              href="index.html"
               >Home</a
             >
             <a
-              class="hover:text-[var(--primary-color)] transition-colors"
-              href="#"
-              >Projects</a
-            >
-            <a
-              class="hover:text-[var(--primary-color)] transition-colors"
-              href="#"
+              class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+              href="about.html"
               >About</a
             >
             <a
-              class="hover:text-[var(--primary-color)] transition-colors"
-              href="#"
+              class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+              href="projects.html"
+              >Projects</a
+            >
+            <a
+              class="text-sm font-bold text-[var(--text-primary)] transition-colors hover:text-[var(--text-primary)]"
+              href="contact.html"
+              >Contact</a
+            >
+            <a
+              class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+              href="my_favorites.html"
               >My Favorites</a
             >
           </nav>
-          <div class="flex items-center gap-2">
-            <div class="relative">
-              <input
-                class="rounded-lg h-10 bg-[var(--accent-color)] text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] transition-all duration-300 w-48"
-                placeholder="Search..."
-                type="text"
-              />
-              <div
-                class="absolute inset-y-0 left-0 flex items-center pl-3 text-[var(--text-secondary)]"
-              >
-                <svg
-                  fill="currentColor"
-                  height="20px"
-                  viewBox="0 0 256 256"
-                  width="20px"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-            <button
-              class="flex items-center justify-center rounded-lg h-10 w-10 bg-[var(--accent-color)] text-[var(--text-primary)] hover:bg-[var(--border-color)] transition-colors"
-            >
-              <svg
-                fill="currentColor"
-                height="20px"
-                viewBox="0 0 256 256"
-                width="20px"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"
-                ></path>
-              </svg>
-            </button>
-            <div
-              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
-              style="
-                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCs59s0cU7r93-vRgPYlQ9mI01Ib2_cFZUHmmnOWaONs4aRW_91ZFU8NSCDlKo4aN-CMRRSpr2ONyQljL7YLYXO28Bpr1KMvNVmNrvztfNlyMT2ZEmmD88_swJxZxoJelaIdFkPksvuTlRBdWPwThFYeMEhmhMjnT9joHUeQ-ZT96j14BE9x6AKQjs4aTT_QXeSZSz9kIZVZ_5TiFtK2kuIri4kX117NjlhpP8O_QOELpfn5AGzbrB7vn1pKwv54gEzEm7MQwCTfs0');
-              "
-            ></div>
-          </div>
-        </header>
-        <main class="flex-1">
+        </div>
+      </header>
+      <main class="flex-1">
           <div class="px-10 py-6">
             <nav aria-label="Breadcrumb">
               <ol
@@ -155,7 +96,7 @@
                 <li>
                   <a
                     class="hover:text-[var(--text-primary)] transition-colors"
-                    href="#"
+                    href="index.html"
                     >Home</a
                   >
                 </li>
@@ -196,12 +137,12 @@
                   form below.
                 </p>
               </div>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <div class="grid grid-cols-1 md:grid-cols-1 gap-12">
                 <form class="space-y-6">
                   <div>
                     <label class="sr-only" for="name">Your Name</label>
                     <input
-                      class="form-input w-full rounded-lg text-[var(--text-primary)] border border-[var(--border-color)] bg-[var(--background-color)] h-14 placeholder:text-[var(--text-secondary)] p-4 text-base focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition"
+                      class="form-input w-full rounded-lg text-[var(--text-primary)] border border-[var(--secondary-color)] bg-[var(--background-color)] h-14 placeholder:text-[var(--text-secondary)] p-4 text-base focus:ring-2 focus:ring-[var(--accent-color)] focus:border-transparent transition"
                       id="name"
                       placeholder="Your Name"
                       type="text"
@@ -210,7 +151,7 @@
                   <div>
                     <label class="sr-only" for="email">Your Email</label>
                     <input
-                      class="form-input w-full rounded-lg text-[var(--text-primary)] border border-[var(--border-color)] bg-[var(--background-color)] h-14 placeholder:text-[var(--text-secondary)] p-4 text-base focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition"
+                      class="form-input w-full rounded-lg text-[var(--text-primary)] border border-[var(--secondary-color)] bg-[var(--background-color)] h-14 placeholder:text-[var(--text-secondary)] p-4 text-base focus:ring-2 focus:ring-[var(--accent-color)] focus:border-transparent transition"
                       id="email"
                       placeholder="Your Email"
                       type="email"
@@ -219,7 +160,7 @@
                   <div>
                     <label class="sr-only" for="message">Your Message</label>
                     <textarea
-                      class="form-textarea w-full rounded-lg text-[var(--text-primary)] border border-[var(--border-color)] bg-[var(--background-color)] placeholder:text-[var(--text-secondary)] p-4 text-base resize-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition"
+                      class="form-textarea w-full rounded-lg text-[var(--text-primary)] border border-[var(--secondary-color)] bg-[var(--background-color)] placeholder:text-[var(--text-secondary)] p-4 text-base resize-none focus:ring-2 focus:ring-[var(--accent-color)] focus:border-transparent transition"
                       id="message"
                       placeholder="Your Message"
                       rows="6"
@@ -227,114 +168,81 @@
                   </div>
                   <div>
                     <button
-                      class="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-[var(--primary-color)] text-white text-base font-bold hover:bg-[var(--secondary-color)] transition-colors"
+                      class="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-[var(--text-primary)] text-[var(--background-color)] text-base font-bold hover:bg-[var(--text-secondary)] transition-colors"
                       type="submit"
                     >
                       Send Message
                     </button>
                   </div>
                 </form>
-                <div class="space-y-8">
-                  <div>
-                    <h3
-                      class="text-2xl font-bold text-[var(--text-primary)] mb-4"
-                    >
-                      Contact Information
-                    </h3>
-                    <div class="space-y-4">
-                      <div class="flex items-center gap-4">
-                        <div
-                          class="text-[var(--primary-color)] flex items-center justify-center rounded-full bg-[var(--accent-color)] shrink-0 size-12"
-                        >
-                          <svg
-                            fill="currentColor"
-                            height="24px"
-                            viewBox="0 0 256 256"
-                            width="24px"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"
-                            ></path>
-                          </svg>
-                        </div>
-                        <div>
-                          <p
-                            class="text-lg font-medium text-[var(--text-primary)]"
-                          >
-                            Email
-                          </p>
-                          <a
-                            class="text-base text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                            href="mailto:sophia.miller@email.com"
-                            >sophia.miller@email.com</a
-                          >
-                        </div>
-                      </div>
-                      <div class="flex items-center gap-4">
-                        <div
-                          class="text-[var(--primary-color)] flex items-center justify-center rounded-full bg-[var(--accent-color)] shrink-0 size-12"
-                        >
-                          <svg
-                            fill="currentColor"
-                            height="24px"
-                            viewBox="0 0 256 256"
-                            width="24px"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
-                            ></path>
-                          </svg>
-                        </div>
-                        <div>
-                          <p
-                            class="text-lg font-medium text-[var(--text-primary)]"
-                          >
-                            Instagram
-                          </p>
-                          <a
-                            class="text-base text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
-                            href="#"
-                            >@sophia.miller</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </main>
-        <footer class="border-t border-solid border-[var(--border-color)]">
-          <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-center space-x-6">
+      <footer
+        class="border-t border-[var(--secondary-color)] bg-[var(--background-color)]"
+      >
+        <div class="container mx-auto max-w-7xl px-6 py-8">
+          <div
+            class="flex flex-col items-center justify-between gap-4 md:flex-row"
+          >
+            <p class="text-sm text-[var(--text-secondary)]">
+              © 2024 PhotoFolio. All rights reserved.
+            </p>
+            <div class="flex items-center gap-4">
               <a
-                class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors"
+                class="text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
                 href="#"
               >
-                <span class="sr-only">Instagram</span>
                 <svg
                   aria-hidden="true"
-                  class="h-6 w-6"
+                  class="h-5 w-5"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path
                     clip-rule="evenodd"
-                    d="M12.315 2c-4.04.004-4.502.018-6.082.092C4.786 2.18 3.93 2.45 3.238 2.766a3.54 3.54 0 0 0-1.47 1.47c-.316.692-.586 1.548-.678 3.018C1.018 7.813 1.004 8.274 1 12.315c.004 4.04.018 4.502.092 6.082.092 1.47.362 2.326.678 3.018a3.54 3.54 0 0 0 1.47 1.47c.692.316 1.548.586 3.018.678 1.58.074 2.042.088 6.082.092s4.502-.014 6.082-.092c1.47-.092 2.326-.362 3.018-.678a3.54 3.54 0 0 0 1.47-1.47c.316-.692.586-1.548.678-3.018.074-1.58.088-2.042.092-6.082s-.014-4.502-.092-6.082c-.092-1.47-.362-2.326-.678-3.018a3.54 3.54 0 0 0-1.47-1.47c-.692-.316-1.548-.586-3.018-.678-1.58-.074-2.042-.088-6.082-.092zM4.062 12.315c-.004 3.327.01 3.655.078 4.71.06.924.28 1.538.56 2.016.35.604.814 1.068 1.418 1.418.478.28.992.5 2.016.56 1.055.068 1.383.082 4.71.078 3.327-.004 3.655-.01 4.71-.078.924-.06 1.538-.28 2.016-.56.604-.35 1.068-.814 1.418-1.418.28-.478.5-1.092.56-2.016.068-1.055.082-1.383.078-4.71s-.01-3.655-.078-4.71c-.06-.924-.28-1.538-.56-2.016a2.89 2.89 0 0 0-1.418-1.418c-.478-.28-.992-.5-2.016-.56-1.055-.068-1.383-.082-4.71-.078s-3.655.01-4.71.078c-.924.06-1.538.28-2.016.56a2.89 2.89 0 0 0-1.418 1.418c-.28.478-.5.992-.56 2.016-.068 1.055-.082 1.383-.078 4.71zm5.918 0a2.335 2.335 0 1 0 4.67 0 2.335 2.335 0 0 0-4.67 0zm8.02-4.67a1.167 1.167 0 1 0 0 2.334 1.167 1.167 0 0 0 0-2.334zM12 8.019c2.2 0 3.981 1.78 3.981 3.98s-1.781 3.981-3.981 3.981-3.981-1.78-3.981-3.98S9.8 8.02 12 8.02z"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
                     fill-rule="evenodd"
                   ></path>
                 </svg>
               </a>
+              <a
+                class="text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+                href="#"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="h-5 w-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427C2.013 15.098 2 14.744 2 12.315s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.8 3.685c.636-.247 1.363-.416 2.427-.465C9.256 2.013 9.61 2 12.315 2zM12 7a5.315 5.315 0 100 10.63A5.315 5.315 0 0012 7zm0 8.632a3.317 3.317 0 110-6.633 3.317 3.317 0 010 6.633zm6.315-9.458a1.238 1.238 0 100-2.475 1.238 1.238 0 000 2.475z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                class="text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
+                href="#"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="h-5 w-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                  ></path>
+                </svg>
+              </a>
             </div>
-            <p class="mt-8 text-center text-base text-[var(--text-secondary)]">
-              © 2024 Sophia Miller. All rights reserved.
-            </p>
           </div>
-        </footer>
-      </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
