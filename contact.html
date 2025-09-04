@@ -19,7 +19,7 @@
         --text-primary-light: #1a1a1a;
         --text-secondary-light: #4a4a4a;
         --accent-color-light: #d0d2d5;
-        
+
         --primary-color-dark: #2d3748;
         --secondary-color-dark: #4a5568;
         --background-color-dark: #1a202c;
@@ -66,7 +66,9 @@
       }
     </style>
   </head>
-  <body class="light-mode bg-[var(--background-color)] text-[var(--text-primary)]">
+  <body
+    class="light-mode bg-[var(--background-color)] text-[var(--text-primary)]"
+  >
     <div class="flex min-h-screen flex-col">
       <header
         class="sticky top-0 z-10 w-full border-b border-[var(--secondary-color)] bg-[var(--background-color)]/80 backdrop-blur-sm"
@@ -110,11 +112,6 @@
                 class="text-sm font-bold text-[var(--text-primary)] transition-colors hover:text-[var(--text-primary)]"
                 href="contact.html"
                 >Contact</a
-              >
-              <a
-                class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
-                href="my_favorites.html"
-                >My Favorites</a
               >
             </nav>
             <button
@@ -188,61 +185,61 @@
             </nav>
           </div>
         </div>
-          <div class="flex justify-center py-10 px-4">
-            <div class="w-full max-w-2xl">
-              <div class="text-center mb-12">
-                <h1
-                  class="text-5xl font-bold tracking-tight text-[var(--text-primary)]"
-                >
-                  Get in Touch
-                </h1>
-                <p class="mt-4 text-lg text-[var(--text-secondary)]">
-                  Have a project in mind or just want to say hi? Fill out the
-                  form below.
-                </p>
-              </div>
-              <div class="grid grid-cols-1 md:grid-cols-1 gap-12">
-                <form class="space-y-6">
-                  <div>
-                    <label class="sr-only" for="name">Your Name</label>
-                    <input
-                      class="form-input w-full rounded-lg text-[var(--text-primary)] border border-[var(--secondary-color)] bg-[var(--background-color)] h-14 placeholder:text-[var(--text-secondary)] p-4 text-base focus:ring-2 focus:ring-[var(--accent-color)] focus:border-transparent transition"
-                      id="name"
-                      placeholder="Your Name"
-                      type="text"
-                    />
-                  </div>
-                  <div>
-                    <label class="sr-only" for="email">Your Email</label>
-                    <input
-                      class="form-input w-full rounded-lg text-[var(--text-primary)] border border-[var(--secondary-color)] bg-[var(--background-color)] h-14 placeholder:text-[var(--text-secondary)] p-4 text-base focus:ring-2 focus:ring-[var(--accent-color)] focus:border-transparent transition"
-                      id="email"
-                      placeholder="Your Email"
-                      type="email"
-                    />
-                  </div>
-                  <div>
-                    <label class="sr-only" for="message">Your Message</label>
-                    <textarea
-                      class="form-textarea w-full rounded-lg text-[var(--text-primary)] border border-[var(--secondary-color)] bg-[var(--background-color)] placeholder:text-[var(--text-secondary)] p-4 text-base resize-none focus:ring-2 focus:ring-[var(--accent-color)] focus:border-transparent transition"
-                      id="message"
-                      placeholder="Your Message"
-                      rows="6"
-                    ></textarea>
-                  </div>
-                  <div>
-                    <button
-                      class="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-[var(--text-primary)] text-[var(--background-color)] text-base font-bold hover:bg-[var(--text-secondary)] transition-colors"
-                      type="submit"
-                    >
-                      Send Message
-                    </button>
-                  </div>
-                </form>
-              </div>
+        <div class="flex justify-center py-10 px-4">
+          <div class="w-full max-w-2xl">
+            <div class="text-center mb-12">
+              <h1
+                class="text-5xl font-bold tracking-tight text-[var(--text-primary)]"
+              >
+                Get in Touch
+              </h1>
+              <p class="mt-4 text-lg text-[var(--text-secondary)]">
+                Have a project in mind or just want to say hi? Fill out the form
+                below.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-12">
+              <form class="space-y-6">
+                <div>
+                  <label class="sr-only" for="name">Your Name</label>
+                  <input
+                    class="form-input w-full rounded-lg text-[var(--text-primary)] border border-[var(--secondary-color)] bg-[var(--background-color)] h-14 placeholder:text-[var(--text-secondary)] p-4 text-base focus:ring-2 focus:ring-[var(--accent-color)] focus:border-transparent transition"
+                    id="name"
+                    placeholder="Your Name"
+                    type="text"
+                  />
+                </div>
+                <div>
+                  <label class="sr-only" for="email">Your Email</label>
+                  <input
+                    class="form-input w-full rounded-lg text-[var(--text-primary)] border border-[var(--secondary-color)] bg-[var(--background-color)] h-14 placeholder:text-[var(--text-secondary)] p-4 text-base focus:ring-2 focus:ring-[var(--accent-color)] focus:border-transparent transition"
+                    id="email"
+                    placeholder="Your Email"
+                    type="email"
+                  />
+                </div>
+                <div>
+                  <label class="sr-only" for="message">Your Message</label>
+                  <textarea
+                    class="form-textarea w-full rounded-lg text-[var(--text-primary)] border border-[var(--secondary-color)] bg-[var(--background-color)] placeholder:text-[var(--text-secondary)] p-4 text-base resize-none focus:ring-2 focus:ring-[var(--accent-color)] focus:border-transparent transition"
+                    id="message"
+                    placeholder="Your Message"
+                    rows="6"
+                  ></textarea>
+                </div>
+                <div>
+                  <button
+                    class="w-full flex items-center justify-center rounded-lg h-12 px-6 bg-[var(--text-primary)] text-[var(--background-color)] text-base font-bold hover:bg-[var(--text-secondary)] transition-colors"
+                    type="submit"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
-        </main>
+        </div>
+      </main>
       <footer
         class="border-t border-[var(--secondary-color)] bg-[var(--background-color)]"
       >
