@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>PhotoFolio - ミニマルな写真ポートフォリオ</title>
+    <title>PhotoFolio - 写真ポートフォリオサイト</title>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -19,7 +19,7 @@
         --text-primary-light: #1a1a1a;
         --text-secondary-light: #4a4a4a;
         --accent-color-light: #d0d2d5;
-        
+
         --primary-color-dark: #2d3748;
         --secondary-color-dark: #4a5568;
         --background-color-dark: #1a202c;
@@ -65,9 +65,11 @@
           0 4px 6px -4px rgba(255, 255, 255, 0.1);
       }
     </style>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="light-mode bg-[var(--background-color)] text-[var(--text-primary)]">
+  <body
+    class="light-mode bg-[var(--background-color)] text-[var(--text-primary)]"
+  >
     <div class="flex min-h-screen flex-col">
       <header
         class="sticky top-0 z-10 w-full border-b border-[var(--secondary-color)] bg-[var(--background-color)]/80 backdrop-blur-sm"
@@ -149,34 +151,52 @@
         <div
           class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3"
         >
-          <a href="projects.html" class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300">
+          <a
+            href="projects.html"
+            class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300"
+          >
             <div
               id="random-color-image"
               class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
             ></div>
           </a>
-          <a href="projects.html" class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300">
+          <a
+            href="projects.html"
+            class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300"
+          >
             <div
               class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 bg-img-index-2"
             ></div>
           </a>
-          <a href="projects.html" class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300">
+          <a
+            href="projects.html"
+            class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300"
+          >
             <div
               class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 bg-img-index-3"
             ></div>
           </a>
-          <a href="projects.html" class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300">
+          <a
+            href="projects.html"
+            class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300"
+          >
             <div
               id="random-monochrome-image"
               class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
             ></div>
           </a>
-          <a href="projects.html" class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300">
+          <a
+            href="projects.html"
+            class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300"
+          >
             <div
               class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 bg-img-index-5"
             ></div>
           </a>
-          <a href="projects.html" class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300">
+          <a
+            href="projects.html"
+            class="group overflow-hidden rounded-lg card-shadow transition-shadow duration-300"
+          >
             <div
               class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 bg-img-index-6"
             ></div>
@@ -300,23 +320,108 @@
       });
     </script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const colorImages = ["d.webp", "da.webp", "db.webp", "dc.webp", "dd.webp", "do.webp", "dr.webp", "dt.webp", "e.webp", "eb.webp", "ep.webp", "es.webp", "fh.webp", "fl.webp", "ft.webp", "fu.webp", "fv.webp", "fw.webp", "fy.webp", "fz.webp", "g.webp", "ga.webp", "gb.webp", "gc.webp", "gd.webp", "ge.webp", "gf.webp", "gg.webp", "gh.webp", "gx.webp", "gy.webp", "gz.webp", "h.webp", "ha.webp", "hb.webp", "hc.webp", "i.webp", "j.webp", "k.webp", "l.webp", "m.webp", "n.webp", "o.webp", "p.webp", "q.webp", "r.webp", "s.webp", "t.webp", "u.webp", "v.webp", "w.webp", "x.webp", "y.webp", "z.webp"];
-        const monochromeImages = ["_NAK4266.JPG", "gj.webp", "gk.webp", "gl.webp", "gm.webp", "gn.webp", "go.webp", "gp.webp", "gq.webp", "gr.webp", "gu.webp"];
-    
-        const randomColorImage = colorImages[Math.floor(Math.random() * colorImages.length)];
-        const randomMonochromeImage = monochromeImages[Math.floor(Math.random() * monochromeImages.length)];
-    
+      document.addEventListener('DOMContentLoaded', function () {
+        const colorImages = [
+          'd.webp',
+          'da.webp',
+          'db.webp',
+          'dc.webp',
+          'dd.webp',
+          'do.webp',
+          'dr.webp',
+          'dt.webp',
+          'e.webp',
+          'eb.webp',
+          'ep.webp',
+          'es.webp',
+          'fh.webp',
+          'fl.webp',
+          'ft.webp',
+          'fu.webp',
+          'fv.webp',
+          'fw.webp',
+          'fy.webp',
+          'fz.webp',
+          'g.webp',
+          'ga.webp',
+          'gb.webp',
+          'gc.webp',
+          'gd.webp',
+          'ge.webp',
+          'gf.webp',
+          'gg.webp',
+          'gh.webp',
+          'gx.webp',
+          'gy.webp',
+          'gz.webp',
+          'h.webp',
+          'ha.webp',
+          'hb.webp',
+          'hc.webp',
+          'i.webp',
+          'j.webp',
+          'k.webp',
+          'l.webp',
+          'm.webp',
+          'n.webp',
+          'o.webp',
+          'p.webp',
+          'q.webp',
+          'r.webp',
+          's.webp',
+          't.webp',
+          'u.webp',
+          'v.webp',
+          'w.webp',
+          'x.webp',
+          'y.webp',
+          'z.webp',
+        ];
+        const monochromeImages = [
+          '_NAK4266.JPG',
+          'gj.webp',
+          'gk.webp',
+          'gl.webp',
+          'gm.webp',
+          'gn.webp',
+          'go.webp',
+          'gp.webp',
+          'gq.webp',
+          'gr.webp',
+          'gu.webp',
+        ];
+
+        const randomColorImage =
+          colorImages[Math.floor(Math.random() * colorImages.length)];
+        const randomMonochromeImage =
+          monochromeImages[Math.floor(Math.random() * monochromeImages.length)];
+
         const colorImageDiv = document.getElementById('random-color-image');
-        const monochromeImageDiv = document.getElementById('random-monochrome-image');
-    
+        const monochromeImageDiv = document.getElementById(
+          'random-monochrome-image'
+        );
+
         if (colorImageDiv) {
           colorImageDiv.style.backgroundImage = `url('images/projects/Color/${randomColorImage}')`;
+          colorImageDiv.style.transition = 'filter 0.3s ease';
+          colorImageDiv.addEventListener('mouseover', function () {
+            this.style.filter = 'invert(100%)';
+          });
+          colorImageDiv.addEventListener('mouseout', function () {
+            this.style.filter = 'none';
+          });
         }
-    
+
         if (monochromeImageDiv) {
           monochromeImageDiv.style.backgroundImage = `url('images/projects/Monochrome/${randomMonochromeImage}')`;
           monochromeImageDiv.style.filter = 'grayscale(100%)';
+          monochromeImageDiv.style.transition = 'filter 0.3s ease';
+          monochromeImageDiv.addEventListener('mouseover', function () {
+            this.style.filter = 'grayscale(100%) invert(100%)';
+          });
+          monochromeImageDiv.addEventListener('mouseout', function () {
+            this.style.filter = 'grayscale(100%)';
+          });
         }
       });
     </script>

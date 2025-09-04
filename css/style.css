@@ -45,3 +45,12 @@
 .bg-img-project-mono-18 { background-image: url('../images/projects/Monochrome/gl.webp'); }
 .bg-img-project-mono-19 { background-image: url('../images/projects/Monochrome/gk.webp'); }
 .bg-img-project-mono-20 { background-image: url('../images/projects/Monochrome/gj.webp'); }
+.group .aspect-square {
+  transition: filter 0.3s ease;
+}
+.group:hover .aspect-square:not(.grayscale) {
+  filter: invert(100%);
+}
+.group:hover .aspect-square.grayscale {
+  filter: grayscale(100%) invert(100%);
+}
