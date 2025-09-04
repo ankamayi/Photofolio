@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>PhotoFolio - 写真ポートフォリオサイト</title>
+    <title>PhotoFolio - ポートフォリオサイト</title>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -157,7 +157,7 @@
           >
             <div
               id="random-color-image"
-              class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+              class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
             ></div>
           </div>
           <div
@@ -165,7 +165,7 @@
             data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_tbMgLHUuAgDb8UOMjTU4jyyj8lTdUKQDf5-5hvDjdeh7PpES8Dw9ceL8VzbBTLORQBKuTo3KhQknpVChvaa-zLHjYKGVUJ01lPOPSgchAEVhKTH7Ft7gH-nrWHqzU0GC8MBQuKySeTI_Fv4n-HfgByTIwSg9qxS98fabL04toqteUqj6koGaBpechgNvQlxLnQpJtyeY2K9K95cA0-FmCXaCCQWKPmCVZqjwIiT480gATxQGuWMb6OrOVQCVAl3x52IgsNXTJJE"
           >
             <div
-              class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 bg-img-index-2"
+              class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 bg-img-index-2 fade-in"
             ></div>
           </div>
           <div
@@ -173,7 +173,7 @@
             data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5mPZwAcHt6LGbwfDCBcufJqHrTl4VUXo4lyViBYxc8M5FO7b6wMAH-EPmG09Tzw2Mff5j9AlGtROIFgeyDuPjLrc6znuReWUZWb6UaZQRstXSb1xFGUiWr4gTIWHOG-1tePACeAlqlfwvJpHTuBmJ1ouIDBt57AgMf-0sZL2o1Er__IiSqL1hidCIZlTb_C04VcEKeZ78D4Do7qViTH7HS7M6yDTXb81uSPAmqWnHs9NoOLFNUtDaf3A5pqbs1qEwaABZS2q0Yx8"
           >
             <div
-              class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 bg-img-index-3"
+              class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 bg-img-index-3 fade-in"
             ></div>
           </div>
           <div
@@ -182,7 +182,7 @@
           >
             <div
               id="random-monochrome-image"
-              class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105"
+              class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
             ></div>
           </div>
           <div
@@ -190,7 +190,7 @@
             data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVVh-F_zqhcgIsFbEOuCtaqkTYa4L5zAg0YY8hnFKdox-jcMjbnvNI3e3WYHiUBIZd8roU7NMq0dMKBD1S6p_Db_3Q6NHfNO6LvlHzeV4HluSAEgx7xeUd4-h78Aq6V2AZjebE-FzoZ83RHDpgXwbxiy6bk2EBjcvZcdOW7xwzK0twJLJuktGhSzXeeVHnlqWiGgjbWvtVG8_0FO1ysCM_isikJQuvvAy-1WCAdPDwyDEPK0rlxqKQzaBiu9rmmw9qF_S_UrYIkqo"
           >
             <div
-              class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 bg-img-index-5"
+              class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 bg-img-index-5 fade-in"
             ></div>
           </div>
           <div
@@ -198,7 +198,7 @@
             data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQkkE7j6D-pOmRH5gG1Emi1NcPPBhaC9lZ93vJVlNrsm4ZykWZ63rHiKNkgK3e-U5Is3PKbLSZbbTNdmcdJZuNgU8G42PNCVGpUY0AXvVd2V0WE7J8qGKPUOEu_mzi9dVIi8zcWiqC82_y1QN7soZb1uqBPgib66GI5AVxQev4vxf7_jHtOh9EapeMfZvrLl8ojMdSih7DR6RO-HXgt1xoGrXb-dmpXuScTce7-limA3z8L6to19_Sdxxgfexlpx7XkGJX0W2Jrno"
           >
             <div
-              class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 bg-img-index-6"
+              class="aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 bg-img-index-6 fade-in"
             ></div>
           </div>
         </div>
@@ -426,6 +426,9 @@
           colorImageDiv.addEventListener('mouseout', function () {
             this.style.filter = 'none';
           });
+          setTimeout(() => {
+            colorImageDiv.classList.add('visible');
+          }, 100);
         }
 
         if (monochromeImageDiv) {
@@ -440,7 +443,28 @@
           monochromeImageDiv.addEventListener('mouseout', function () {
             this.style.filter = 'grayscale(100%)';
           });
+          setTimeout(() => {
+            monochromeImageDiv.classList.add('visible');
+          }, 100);
         }
+
+        const staticImages = document.querySelectorAll(
+          '.bg-img-index-2, .bg-img-index-3, .bg-img-index-5, .bg-img-index-6'
+        );
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.classList.add('visible');
+              }, 100);
+              observer.unobserve(entry.target);
+            }
+          });
+        });
+
+        staticImages.forEach((img) => {
+          observer.observe(img);
+        });
 
         const modal = document.getElementById('modal');
         const modalImage = document.getElementById('modal-image');

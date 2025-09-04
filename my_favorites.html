@@ -222,8 +222,9 @@
             >
               <img
                 alt="Favorite Photo 1"
-                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 fade-in"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrgIwovztZvYtG5SCB6kbfb439QDvYkqr1Ak0OUFBqH-ZI_Sabh5RHGUY-dv-5LN-fFzjKfUrk9DNejuvtd0_Kup7sCy0sTd69MuFzG8CBFGXr25_g-CR3Qo8qt2CQ1PQJWRgVJg-NV38P2VgJRxCP0HDsvU74oULnAQvJrTPQ3nyzyzQV_nyk6YCERYNn3NwDlPUFNRvFBFWQoNfp8lpsKxzO6s2vBpZYYTdmluRVFP0PmKBcU3mJwyNg_yfrbcmayCulKoqJMqg"
+                loading="lazy"
               />
               <div
                 class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -234,7 +235,7 @@
             >
               <img
                 alt="Favorite Photo 2"
-                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 fade-in"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJkx7rXMI1szoCQPMOe44KKw3dJay4GmNtYqbO4XHWVmBFlK9qMFQyOE_0e3vePxfMXBIx1GOLkPp9TvFTg4Sq6qTzOYAm1YwHdlrP42Z1hReTNRex-KLqoPwCt3VXW0dKsnlX--uRaiL4SQ9_vX_B7s1rqY35LPJkimmmSju33f5mpkIw4sfkRwFFs0dF34pLMljeX8zorzX2GLVT4ATxxe9HndlGTQvizrBmrtj0rlPIbqN7AoForCp8jMPiZ9SXFXxB-mENKUg"
                 loading="lazy"
               />
@@ -359,6 +360,29 @@
             localStorage.setItem('color-theme', 'dark');
           }
         }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const lazyImages = document.querySelectorAll('img.fade-in');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              
+              setTimeout(() => {
+                img.classList.add('visible');
+              }, 100);
+
+              observer.unobserve(img);
+            }
+          });
+        });
+
+        lazyImages.forEach(img => {
+          observer.observe(img);
+        });
       });
     </script>
   </body>

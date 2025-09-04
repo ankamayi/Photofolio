@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>PhotoFolio - ミニマルな写真ポートフォリオ</title>
+    <title>PhotoFolio - Projects</title>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -19,7 +19,7 @@
         --text-primary-light: #1a1a1a;
         --text-secondary-light: #4a4a4a;
         --accent-color-light: #d0d2d5;
-        
+
         --primary-color-dark: #2d3748;
         --secondary-color-dark: #4a5568;
         --background-color-dark: #1a202c;
@@ -68,9 +68,11 @@
         scroll-behavior: smooth;
       }
     </style>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="light-mode bg-[var(--background-color)] text-[var(--text-primary)]">
+  <body
+    class="light-mode bg-[var(--background-color)] text-[var(--text-primary)]"
+  >
     <div class="flex min-h-screen flex-col">
       <header
         class="sticky top-0 z-10 w-full border-b border-[var(--secondary-color)] bg-[var(--background-color)]/80 backdrop-blur-sm"
@@ -213,130 +215,428 @@
         <section class="py-16" id="projects">
           <div class="container mx-auto px-4">
             <div class="mb-8 flex flex-wrap items-center justify-center gap-8">
-              <a href="#" class="filter-btn text-sm font-bold text-[var(--text-primary)] transition-colors hover:text-[var(--text-primary)]" data-filter="all">All</a>
-              <a href="#" class="filter-btn text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]" data-filter="color">Color</a>
-              <a href="#" class="filter-btn text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]" data-filter="mono">Monochrome</a>
+              <a
+                href="#"
+                class="filter-btn text-sm font-bold text-[var(--text-primary)] transition-colors hover:text-[var(--text-primary)]"
+                data-filter="all"
+                >All</a
+              >
+              <a
+                href="#"
+                class="filter-btn text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+                data-filter="color"
+                >Color</a
+              >
+              <a
+                href="#"
+                class="filter-btn text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
+                data-filter="mono"
+                >Monochrome</a
+              >
             </div>
-            <div id="image-grid" class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/hc.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/hc.webp"></div>
+            <div
+              id="image-grid"
+              class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+            >
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/hc.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/hc.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/hb.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/hb.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/hb.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/hb.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/ha.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/ha.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/ha.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/ha.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/gz.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/gz.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/gz.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/gz.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/gg.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/gg.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/gg.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/gg.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/gx.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/gx.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/gx.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/gx.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/gh.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/gh.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/gh.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/gh.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/gg.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/gg.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/gg.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/gg.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/gf.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/gf.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/gf.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/gf.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/ge.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/ge.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/ge.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/ge.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/gd.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/gd.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/gd.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/gd.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/gc.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/gc.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/gc.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/gc.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/gb.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/gb.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/gb.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/gb.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/ga.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/ga.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/ga.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/ga.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/fz.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/fz.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/fz.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/fz.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/fy.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/fy.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/fy.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/fy.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/fw.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/fw.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/fw.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/fw.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/fv.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/fv.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/fv.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/fv.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/fu.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/fu.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/fu.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/fu.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="color" data-src="./images/projects/Color/ft.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105" data-bg-src="./images/projects/Color/ft.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="color"
+                data-src="./images/projects/Color/ft.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 fade-in"
+                  data-bg-src="./images/projects/Color/ft.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gu.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gu.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gu.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale fade-in"
+                  data-bg-src="./images/projects/Monochrome/gu.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gr.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gr.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gr.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale fade-in"
+                  data-bg-src="./images/projects/Monochrome/gr.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gq.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gq.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gq.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale fade-in"
+                  data-bg-src="./images/projects/Monochrome/gq.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gp.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gp.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gp.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale fade-in"
+                  data-bg-src="./images/projects/Monochrome/gp.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/go.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/go.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/go.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale fade-in"
+                  data-bg-src="./images/projects/Monochrome/go.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gn.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gn.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gn.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale fade-in"
+                  data-bg-src="./images/projects/Monochrome/gn.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gm.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gm.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gm.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale fade-in"
+                  data-bg-src="./images/projects/Monochrome/gm.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gl.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gl.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gl.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale fade-in"
+                  data-bg-src="./images/projects/Monochrome/gl.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gk.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gk.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gk.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale fade-in"
+                  data-bg-src="./images/projects/Monochrome/gk.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gj.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gj.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gj.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale fade-in"
+                  data-bg-src="./images/projects/Monochrome/gj.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gu.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gu.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gu.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale fade-in"
+                  data-bg-src="./images/projects/Monochrome/gu.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gr.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gr.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gr.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale fade-in"
+                  data-bg-src="./images/projects/Monochrome/gr.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gq.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gq.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gq.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale fade-in"
+                  data-bg-src="./images/projects/Monochrome/gq.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gp.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gp.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gp.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale fade-in"
+                  data-bg-src="./images/projects/Monochrome/gp.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/go.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/go.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/go.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale fade-in"
+                  data-bg-src="./images/projects/Monochrome/go.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gn.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gn.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gn.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale fade-in"
+                  data-bg-src="./images/projects/Monochrome/gn.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gm.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gm.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gm.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale fade-in"
+                  data-bg-src="./images/projects/Monochrome/gm.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gl.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gl.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gl.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale"
+                  data-bg-src="./images/projects/Monochrome/gl.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gk.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gk.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gk.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale"
+                  data-bg-src="./images/projects/Monochrome/gk.webp"
+                ></div>
               </div>
-              <div class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer" data-category="mono" data-src="./images/projects/Monochrome/gj.webp">
-                <div class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale" data-bg-src="./images/projects/Monochrome/gj.webp"></div>
+              <div
+                class="filterable-item group overflow-hidden rounded-lg card-shadow transition-shadow duration-300 cursor-pointer"
+                data-category="mono"
+                data-src="./images/projects/Monochrome/gj.webp"
+              >
+                <div
+                  class="lazy-bg aspect-square w-full bg-cover bg-center transition-transform duration-300 group-hover:scale-105 grayscale"
+                  data-bg-src="./images/projects/Monochrome/gj.webp"
+                ></div>
               </div>
             </div>
           </div>
@@ -401,11 +701,19 @@
         </div>
       </footer>
     </div>
-    <div id="modal" class="fixed top-0 left-0 z-20 w-full h-full bg-black/90 hidden items-center justify-center">
+    <div
+      id="modal"
+      class="fixed top-0 left-0 z-20 w-full h-full bg-black/90 hidden items-center justify-center"
+    >
       <div class="max-w-4xl max-h-full p-4">
         <img id="modal-image" src="" alt="" class="max-w-full max-h-full" />
       </div>
-      <button id="modal-close" class="absolute top-4 right-4 text-white text-4xl">&times;</button>
+      <button
+        id="modal-close"
+        class="absolute top-4 right-4 text-white text-4xl"
+      >
+        &times;
+      </button>
     </div>
     <script>
       const themeToggleBtn = document.getElementById('theme-toggle');
@@ -462,65 +770,73 @@
       const modalImage = document.getElementById('modal-image');
       const modalClose = document.getElementById('modal-close');
 
-      document.querySelectorAll("[data-src]").forEach(item => {
-        item.addEventListener("click", event => {
-          modal.classList.remove("hidden");
-          modal.classList.add("flex");
+      document.querySelectorAll('[data-src]').forEach((item) => {
+        item.addEventListener('click', (event) => {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
           modalImage.src = event.currentTarget.dataset.src;
         });
       });
 
-      modalClose.addEventListener("click", () => {
-        modal.classList.add("hidden");
-        modal.classList.remove("flex");
-        modalImage.src = "";
+      modalClose.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modalImage.src = '';
       });
 
-      modal.addEventListener("click", (e) => {
+      modal.addEventListener('click', (e) => {
         if (e.target === modal) {
-          modal.classList.add("hidden");
-          modal.classList.remove("flex");
-          modalImage.src = "";
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          modalImage.src = '';
         }
       });
     </script>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener('DOMContentLoaded', function () {
         const lazyBgElements = document.querySelectorAll('.lazy-bg');
 
         const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
+          entries.forEach((entry) => {
             if (entry.isIntersecting) {
               const element = entry.target;
               const bgSrc = element.getAttribute('data-bg-src');
               if (bgSrc) {
                 element.style.backgroundImage = `url('${bgSrc}')`;
               }
+
+              setTimeout(() => {
+                element.classList.add('visible');
+              }, 100);
+
               observer.unobserve(element);
             }
           });
         });
 
-        lazyBgElements.forEach(element => {
+        lazyBgElements.forEach((element) => {
           observer.observe(element);
         });
 
         const filterButtons = document.querySelectorAll('.filter-btn');
         const imageItems = document.querySelectorAll('.filterable-item');
 
-        filterButtons.forEach(button => {
+        filterButtons.forEach((button) => {
           button.addEventListener('click', (e) => {
             e.preventDefault();
-            filterButtons.forEach(btn => {
+            filterButtons.forEach((btn) => {
               btn.classList.remove('font-bold', 'text-[var(--text-primary)]');
               btn.classList.add('font-medium', 'text-[var(--text-secondary)]');
             });
             button.classList.add('font-bold', 'text-[var(--text-primary)]');
-            button.classList.remove('font-medium', 'text-[var(--text-secondary)]');
+            button.classList.remove(
+              'font-medium',
+              'text-[var(--text-secondary)]'
+            );
 
             const filter = button.dataset.filter;
 
-            imageItems.forEach(item => {
+            imageItems.forEach((item) => {
               if (filter === 'all' || item.dataset.category === filter) {
                 item.style.display = 'block';
               } else {
